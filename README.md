@@ -1,127 +1,110 @@
 # Text-to-SQL: LSTM Seq2Seq vs Fine-Tuned T5 on Spider
 
-NLP group project comparing a from-scratch LSTM Seq2Seq model with a fine-tuned T5 transformer
-for cross-database natural language to SQL translation on the Spider benchmark.
+Group project comparing a from-scratch LSTM Seq2Seq model with a fine-tuned T5-base
+transformer on the Spider text-to-SQL benchmark.
 
-Research question: **Can a fine-tuned pretrained Transformer outperform a from-scratch LSTM
-Seq2Seq model for cross-database natural language to SQL translation?**
+Research question: Can a fine-tuned pretrained Transformer outperform a from-scratch LSTM
+Seq2Seq model for cross-database natural language to SQL translation?
 
 ## Project Structure
 
 ```
 text-to-sql/
 ├── model.ipynb                 LSTM Seq2Seq: preprocessing, training, inference
-├── t5_01_finetune.ipynb        T5-small fine-tuning (run on Colab)
-├── t5_02_inference.ipynb       T5-small inference (run on Colab)
-├── best_seq2seq_lstm.pt        Trained LSTM checkpoint (~50 MB)
+├── t5_01_finetune.ipynb        T5-base fine-tuning (Colab)
+├── t5_02_inference.ipynb       T5-base inference (Colab)
+├── best_seq2seq_lstm.pt        Trained LSTM checkpoint
 ├── predictions/
 │   ├── gold.txt                Ground truth SQL + db_id for dev set
 │   ├── pred_lstm.txt           LSTM predictions on dev set
 │   └── pred_t5.txt             T5 predictions on dev set
 ├── eval_results/
-│   ├── spider_lstm.txt         Spider official eval output (LSTM)
-│   ├── ts_lstm.txt             Test-suite eval output (LSTM)
-│   ├── spider_t5.txt           Spider official eval output (T5)
-│   └── ts_t5.txt               Test-suite eval output (T5)
-├── spider_data/spider_data/    Spider dataset (not in git, see below)
-│   ├── train_spider.json
-│   ├── train_others.json
-│   ├── dev.json
-│   ├── tables.json
-│   └── database/               SQLite files per db_id
-├── data/testsuitedatabases/    Test-suite augmented DBs (not in git)
+│   ├── spider_lstm.txt         
+│   └── spider_t5.txt           
+├── spider_data/spider_data/    Spider dataset
 ├── requirements.txt
-└── README.md
+└── README.md			
+```
+
+The fine-tuned T5-base checkpoint is ~900 MB and not included in the repo.
+Download link: https://drive.google.com/drive/folders/1fFM6Hx4RECUUeDc9xoRn3TsD0S2dpK1y?usp=sharing
+
+## External Dependencies
+
+The Spider evaluation script is used from the official repo. Clone it as a sibling:
+```
+git clone https://github.com/taoyds/spider.git
 ```
 
 ## Setup
 
 ### 1. Python environment
 
-```bash
+Python 3.13.
+
+```
 python -m venv .venv
-.venv\Scripts\activate          # Windows PowerShell
+.venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-Python 3.13 was used during development.
-
-### 2. Download Spider dataset
+### 2. Spider dataset
 
 Download from https://yale-lily.github.io/spider and extract to `spider_data/spider_data/`
-so that the paths `spider_data/spider_data/dev.json` and `spider_data/spider_data/database/`
-exist.
+so that `spider_data/spider_data/dev.json` and `spider_data/spider_data/database/` exist.
 
-### 3. Download test-suite databases
+### 3. Spider evaluation script
 
-Needed for Test-Suite Accuracy evaluation.
-Download from https://github.com/taoyds/test-suite-sql-eval (Google Drive link in README)
-and extract to `data/testsuitedatabases/`. Expected structure:
-`data/testsuitedatabases/database/<db_id>/<db_id>.sqlite`.
+Clone as a sibling to this repo:
 
-For Spider dev databases not covered by the test-suite dump, copy from the regular Spider set:
-
-```powershell
-$tsDir = "data\testsuitedatabases\database"
-$spiderDir = "spider_data\spider_data\database"
-Get-ChildItem $spiderDir -Directory | ForEach-Object {
-    $target = Join-Path $tsDir $_.Name
-    if (-not (Test-Path $target)) {
-        Copy-Item $_.FullName $target -Recurse
-    }
-}
 ```
-
-### 4. Clone evaluation scripts
-
-The official Spider and Test-Suite evaluation scripts are used as-is. Clone them as siblings
-to this repo:
-
-```bash
 cd ..
 git clone https://github.com/taoyds/spider.git
-git clone https://github.com/taoyds/test-suite-sql-eval.git
 ```
 
-### 5. Download NLTK data
+### 4. NLTK data
 
-```bash
+```
 python -c "import nltk; [nltk.download(p) for p in ['punkt', 'punkt_tab', 'wordnet', 'omw-1.4']]"
 ```
 
 ## Running the Pipeline
 
-### LSTM (local)
+Run in this order:
 
-Open `model.ipynb` and run top-to-bottom. Sections:
+### 1. LSTM (local)
 
-1. **Data loading & exploration** (cells 1-30)
-2. **Preprocessing**: schema linking, query normalization, input construction (cells 31-37)
-3. **Data augmentation**: column/value replacement (cells 38-46)
-4. **Tokenization & vocabulary** (cells 47-63)
-5. **Model definition**: Encoder, Decoder, Additive Attention, Seq2Seq (cells 64-75)
-6. **Training**: 15 epochs with teacher forcing, ReduceLROnPlateau scheduler (cells 76-91)
-7. **Inference & prediction file writing** (final cells)
+Open `model.ipynb` and run top to bottom. Contains:
 
-Outputs `predictions/pred_lstm.txt` and `predictions/gold.txt`.
+- Data loading and exploration
+- Preprocessing: schema linking, query normalization, input construction
+- Data augmentation
+- Tokenization and vocabulary construction
+- Model definition: Encoder, Bahdanau Attention, Decoder, Seq2Seq
+- Training: 15 epochs with teacher forcing
+- Inference: generates `predictions/pred_lstm.txt` and `predictions/gold.txt`
 
-### T5-small (Colab)
+Outputs the trained checkpoint as `best_seq2seq_lstm.pt`.
 
-1. Upload `spider_data/` JSONs (train_spider.json, train_others.json, dev.json, tables.json)
-   to your Google Drive under `MyDrive/text-to-sql/spider_data/`.
-2. Run `t5_01_finetune.ipynb` on Colab with GPU runtime. Fine-tunes `t5-small` for 5 epochs,
-   saves checkpoint to Drive at `MyDrive/text-to-sql/t5_small_spider/final/`.
-3. Run `t5_02_inference.ipynb` on Colab with GPU runtime. Loads the checkpoint, runs inference
-   on `dev.json`, downloads `pred_t5.txt` and `gold.txt` at the end.
-4. Copy downloaded files into `predictions/`.
+### 2. T5-base (Colab)
 
-### Evaluation (local)
+Upload the Spider JSONs (`train_spider.json`, `train_others.json`, `dev.json`,
+`tables.json`) to Google Drive under `MyDrive/text-to-sql/spider_data/`.
 
-Run from `text-to-sql/` working directory.
+**Fine-tune**: Run `t5_01_finetune.ipynb` on Colab with GPU. 8 epochs, batch 16,
+learning rate 1e-4. Checkpoint saved to Drive under
+`MyDrive/text-to-sql/t5_base_spider/final/`.
 
-**Spider official eval (Exact Set Match + Execution Accuracy):**
+**Inference**: Run `t5_02_inference.ipynb` on Colab with GPU. Loads the checkpoint,
+generates SQL for all 1034 dev examples, downloads `pred_t5.txt` and `gold.txt`.
 
-```powershell
+Copy the two downloaded files into `predictions/`.
+
+### 3. Evaluation (local)
+
+Run from the `text-to-sql/` working directory:
+LSTM
+```
 python ..\spider\evaluation.py `
     --gold predictions\gold.txt `
     --pred predictions\pred_lstm.txt `
@@ -129,78 +112,60 @@ python ..\spider\evaluation.py `
     --table spider_data\spider_data\tables.json `
     --etype all 2>&1 | Tee-Object eval_results\spider_lstm.txt
 ```
-
-Replace `pred_lstm.txt` with `pred_t5.txt` and `spider_lstm.txt` with `spider_t5.txt` to
-evaluate T5.
-
-**Test-Suite eval:**
-
-```powershell
-python ..\test-suite-sql-eval\evaluation.py `
-    --gold predictions\gold.txt `
-    --pred predictions\pred_lstm.txt `
-    --db data\testsuitedatabases\database `
-    --table spider_data\spider_data\tables.json `
-    --etype all `
-    --plug_value *> eval_results\ts_lstm.txt
+T5-base
 ```
-
-The `--plug_value` flag plugs gold values into predictions before execution, making the
-evaluation robust to value prediction errors (LSTM in particular cannot predict literal
-values reliably).
+python ..\spider\evaluation.py `
+    --gold predictions\gold.txt `
+    --pred predictions\pred_t5.txt `
+    --db spider_data\spider_data\database `
+    --table spider_data\spider_data\tables.json `
+    --etype all 2>&1 | Tee-Object eval_results\spider_t5.txt
+```
 
 ## Dataset
 
-- **Spider** (Yu et al., 2018). Cross-database semantic parsing dataset with ~7,000 training
-  and ~1,000 development examples across 200+ databases. Test set is hidden.
-- **Train split**: `train_spider.json` + `train_others.json`
-- **Dev split**: `dev.json` (used for final evaluation)
-- **Databases unseen at test time**: the 20 dev databases do not overlap with the 140 train
-  databases, enforcing true cross-database generalization.
+Spider (Yu et al., 2018). Cross-database semantic parsing dataset.
+
+- Train split: `train_spider.json` + `train_others.json` (~8,600 examples)
+- Dev split: `dev.json` (1,034 examples on 20 unseen databases)
+- Test split: hidden, not used here
+- Databases in dev do not overlap with databases in train, enforcing cross-database
+  generalization.
 
 ## Models
 
-### LSTM Seq2Seq
+### LSTM Seq2Seq (baseline)
 
-- Learned token embeddings (input and output vocabularies built from training data)
-- Encoder: embedding + bidirectional LSTM
-- Additive (Bahdanau) attention
-- Decoder: embedding + LSTM + attention + output projection
-- Beam search decoding (beam width 3) with UNK penalty and repetition penalty
+...
 
-### T5-small
+### T5-base (fine-tuned)
 
-- Pretrained `t5-small` (60M parameters) fine-tuned on Spider
-- Input format: `translate to SQL: <question> | schema: <table1(col1,col2) | table2(...) ...>`
-- Output format: SQL query as-is (no normalization)
-- Fine-tuning: 5 epochs, batch size 16, learning rate 3e-4, fp16
+- Pretrained `t5-base` (220M parameters)
+- Input format: `translate English to SQL | <db_id> | <question> | schema: <table(cols) ... | foreign_keys: ...>`
+- 8 epochs, batch 16, learning rate 1e-4, fp16
+- Best checkpoint selected by validation loss
 
 ## Evaluation Metrics
 
-- **Exact Set Match (ESM)**: SQL clauses compared as unordered sets, values masked.
-- **Execution Accuracy (EX)**: Predicted SQL executed on the target SQLite database and
-  result set compared to gold. Unordered comparison except when ORDER BY is present.
-- **Test-Suite Accuracy (TS)**: Predictions executed against multiple augmented database
-  instances per schema; correct only if result matches on all of them. Stricter than EX.
+- **Exact Set Match**: SQL clauses parsed and compared as unordered sets, literal values
+  ignored.
+- **Execution Accuracy**: predicted SQL executed against the target SQLite database,
+  result set compared to gold.
 
-All three metrics are additionally reported by **hardness level** (easy, medium, hard,
-extra hard) based on Spider's official query complexity annotation.
+Both metrics are reported on Spider's dev set and broken down by hardness level
+(easy, medium, hard, extra).
 
-## Requirements
+## Results
 
-See `requirements.txt`. Main dependencies:
-
-- torch, transformers, datasets, accelerate
-- sqlglot (SQL normalization)
-- sqlparse, nltk (test-suite eval)
-- pandas, matplotlib, seaborn
+| Metric | LSTM | T5-base |
+|---|---|---|
+| Exact Match (all) | 0.000 | 0.425 |
+| Execution (all) | 0.001 | 0.432 |
 
 ## References
 
-- Yu et al. (2018). Spider: A large-scale human-labeled dataset for complex and cross-domain
-  semantic parsing and text-to-SQL task. EMNLP.
-- Raffel et al. (2020). Exploring the limits of transfer learning with a unified text-to-text
-  transformer. JMLR.
-- Zhong et al. (2020). Semantic Evaluation for Text-to-SQL with Distilled Test Suites. EMNLP.
+- Yu et al. (2018). Spider: A Large-Scale Human-Labeled Dataset for Complex and
+  Cross-Domain Semantic Parsing and Text-to-SQL Task. EMNLP.
+- Raffel et al. (2020). Exploring the Limits of Transfer Learning with a Unified
+  Text-to-Text Transformer. JMLR.
 - Spider evaluation scripts: https://github.com/taoyds/spider
-- Test-suite evaluation scripts: https://github.com/taoyds/test-suite-sql-eval
