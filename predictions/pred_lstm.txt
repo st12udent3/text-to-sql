@@ -1,0 +1,1034 @@
+select count ( * ) from country
+select count ( * ) from country
+select name , name from country order by age desc
+select name , name , country order by age desc
+select avg ( age ) , max ( age ) from country
+select avg ( age ) , avg ( age ) from country
+select name , name from products order by age desc limit 1
+select name , country from country
+select name from member where age > 30
+select name from country where age >= 25
+select country , count ( * ) from church group by country
+select count ( * ) , country from country group by country
+select name from country order by age asc limit 1
+select name from country where age > ( select avg ( age ) from country )
+select name , name from products where age between 50 and age
+select name , name from products where age between 5
+select max ( age ) , max ( age ) from country
+select avg ( age ) , avg ( age ) from country
+select name , name from stadium order by age desc limit 1
+select name , name from church order by age desc limit 1
+select count ( * ) from products where age = 1850
+select count ( * ) from products where age between 50 or age = 25
+select t1.name , count ( * ) from church as t1 join match as t2 on t1.u_id = t2.winning_aircraft group by t2.name
+select country , count ( * ) from railway group by join
+select t2.name , t2.year from stadium as t1 join desc as t2 on t1.railway_id = t2.id group by t2.name order by count ( * ) desc limit 1
+select name , name from shop order by open_year desc limit 3
+select country from church group by country order by count ( * ) desc limit 1
+select country from stadium group by country order by count ( * ) desc limit 1
+select name from people where not people_id in ( select name from round )
+select name from member where not people_id in ( select name from round )
+select name from member where age > 30 intersect select country from member where age < 30
+select t2.name from member as t1 join member as t2 on from = t2.id where t2.name = 2016
+select name from member except select name from member where t1 < >
+select t1.name , t3.name , t2.name from t1 as t1 join
+select name , name , country from artist
+select t1.name , sum ( , ) from phone_market as t1 join
+select t1.name , count ( * ) from club as t1 join
+select name from member where name = 2016
+select t1.name from wedding as t1 join lives_in as t2 on t1.building_id = t2.id join airport as t3 on t2.is_male = t3.id where t3.name = t4
+select name , country from country where t1 join in as t2 on from =
+select name , country from products where t1 join desc as t2 on t1.railway_id = 1 join by as having count ( * ) = 1
+select name , t2.name from player_coach as t1 join personfriend as t2 on t1.railway_id = t2.id where t2.name = 2016
+select t1.name , t2.name from t1 as t1 join member as t2 on t1.railway_id = t2.id where t2.name = 2016 intersect select t1.name from member as t1 join personfriend as t2 on t1.railway_id = t2.id where t2.name = 5
+select sum ( t3.order_quantity ) from club as t1 join desc as t2 on t1.building_id = t2.id join by as t3 on sum = desc limit 1
+select sum ( t3.order_quantity ) from club as t1 join geographic as t2 on t1.customer_id = t2.id join by as t3 on sum = t3.id where t3.name = ( select max ( t3.order_quantity ) from 1 )
+select count ( * ) from student where age > 18
+select count ( * ) from student where age > 18
+select max ( age ) from student
+select count ( * ) from student
+select max ( age ) , ) from student group by join
+select max , max ( age ) , max ( age ) from student
+select count ( * ) from student where age > 20
+select count ( * ) from student where age > 18 and age > 20
+select count ( * ) from student as t1 join student as t2 on t1.stuid = t2.stuid join student as t3 on t2.stuid = t3.stuid where t3.fname = "f"
+select count ( * ) from student where city_code = "f"
+select count ( distinct allergytype ) from
+select count ( distinct allergy ) from
+select fname from student where city_code = "m" or city_code = from
+select distinct from from student as t1 join student as t2 on t1.clubid = t2.clubid join student as t3 on t2.stuid = t3.stuid where t3.advisor = 1121
+select fname , lname from student as t1 join has_allergy as t2 on t1.stuid = t2.stuid join student as t3 on t2.stuid = t3.stuid where t1.clubname = "milk" intersect select = from
+select fname from student where select = from intersect select stuid from has_allergy as t1 join student as t2 on t1.facid = t2.facid join student as t3
+select fname , age from student where not < in ( select stuid from has_allergy as t1 join allergy_type as t2 on t1.allergy = t2.allergy where t2.allergytype = "food"
+select fname , lname from student where stuid in ( select stuid from has_allergy as t1 join student as t2 on t1.stuid = t2.stuid where t2.allergytype = t3
+select stuid from student where not = in ( select stuid from
+select stuid from student where select stuid from student
+select fname , lname from student where not join in ( select stuid from has_allergy as t1 join student as t2 on t1.allergy = t2.allergy where t2.allergytype = "food"
+select distinct from from except select stuid from except select t1 from has_allergy as t1 join = as t2 on = = where
+select fname , age from student where by =
+select max ( age ) , max ( age ) from student
+select fname , age from student where age > 20
+select fname , lname from student where age > ( select max ( age ) from student )
+select avg ( age ) , max ( age ) from student
+select avg ( age ) , avg ( age ) from student
+select avg ( age ) , sex from student group by sex
+select avg ( age ) , sex from student group by sex
+select fname , lname from student where age = in ( select stuid from
+select fname , lname , lname from student where t1 =
+select city_code from student as t1 join student as t2 on t1.stuid = t2.stuid join student as t3 on t2.stuid = t3.stuid where t3.fname = "linda"
+select city_code from student where t1 = "kim"
+select sum , count ( * ) from student as t1 join student as t2 on t1.stuid = t2.stuid group by =
+select city_code , count ( * ) from student group by join
+select fname , age from student where t1 join student as t2 on t1.stuid = t2.stuid group by major having count ( * ) > 1
+select fname , lname , age from student where t1 join student as t2 on t1.stuid = t2.stuid group by as having count ( * ) > 1
+select fname from student where age > 20
+select fname from student where t1 join student as t2 on t1.stuid = t2.stuid join student as t3
+select avg ( age ) from student where not = in
+select avg ( age ) from student where not = (
+select count ( * ) from artist
+select count ( * ) from artist
+select count , count , count ( * ) from artist as t1 join t1 as t2 on t1.id = t1.id group by t1.id
+select t1.country , count , count ( * ) from join as t1 join as t2 on as t2 on t1.id = t2.id group by =
+select count ( * ) from artist
+select count ( * ) from artist
+select count , count , count ( * ) from = as t1 join t2 as t2 on t1.id = t2.id group by =
+select t1.fname , count , count ( * ) from join as t1 as t2 on as t2 on t2 on t1.id = t2.id group by =
+select max ( omim ) from = as
+select country from flight order by join desc limit 1
+select max ( group_equity_shareholding ) from join as t1 t2 on t1.stuid = t2.id where by = t3
+select country from stadium as t1 join ( as t2 on t1.pid = t2.id where by = ( select max ( * ) from =
+select name from campuses where t1 = 2010
+select pname from performance as t1 join player as t2 on t1.id = t2.id join player as t3 on t3.songid = t3.id where t3.name = t4
+select t2.firstname , t2.lastname from performance as t1 join band as t2 on t1.bandmate = t2.id join player as t3 on t3.songid = t3.id where t3.title = 1
+select max ( omim ) from as t1 join as t2 on t1.people_id = t2.id join player as t3 on t3.songid = t3.id where t3.name = 1
+select distinct from from where name like "%digital%"
+select distinct from from where name like "%digital%"
+select count , count ( * ) from operate_company as t1 join t1 as t2 on t2 on t1.id = t2.id group by =
+select count , count ( * ) from operate_company as t1 join
+select country from count ( * ) from as group by join
+select t1.id from artist as t1 join desc as t2 on t1.id = t2.id group by = order by count ( * ) desc limit 1
+select count , count ( * ) from operate_company as t1 join t1 as t2 on t1.id = t2.id group by =
+select count , count ( * ) from operate_company as t1 join t1 as t2 on t1.id = t2.id group by =
+select count ( * ) from = as t1 join team as t2 on t1.bandmate = t2.id join player as t3 on t3.songid = t3.id where t3.title = t4
+select count ( * ) from discipline_enrollments as t1 join band as t2 on t1.bandmate = t2.id join airport as t3 on t3.songid = t3.id where t3.title = t4 and
+select count ( * ) from artist as t1 join tracklists as t2 on = = where t2.city_name = t3
+select count ( * ) from artist as t1 join tracklists as t2 on t1.medicine_id = t2.id where t2.city = t3
+select count ( * ) from artist as t1 join geographic as t2 on = = where
+select count ( * ) from artist as t1 join tracklists as t2 on t1.medicine_id = t2.id join airport as t3
+select avg ( t1.hs ) from player as t1 join lives_in as t2 on t1.id = t2.id where functional_areas = t3 on t3.songid = t3.id where t3.title = t4
+select avg ( t1.hs ) from player as t1 join lives_in as t2 on t1.id = t2.id where functional_areas = t3 on t3.songid = t3.id where t3.title = t4
+select max ( t1.hs ) from as t1 join as t2 on t1.bandmate = t2.id join player as t3 on t3.songid = t3.id where t2.region = t4 and t4.songid =
+select count ( * ) from = as t1 join geographic as t2 on t1.bandmate = t2.id join player as t3 on t3.songid = t3.id where t2.region = t4 and
+select account_id , country from customers
+select account_id , country from customers
+select country from count ( * ) from artist as t1 join photos as t2 on t1.id = t2.id group by = having count ( * ) >= 2
+select t1.name , count from artist as t1 join song as t2 on t2 on t1.id = t2.id group by t1.id having count ( * ) >= 2
+select count ( * ) from camera_lens where t1 join having as t2 on t1.id = t2.id where t1.principal_activities = t3
+select count ( * ) from camera_lens as t1 join focal_length_mm as t2 on t1.id = t2.id where t2.city = t3 on t1.id = t3.id where focal_length_mm = t4
+select avg ( t1.hs ) from artist
+select avg ( t1.hs ) , t1.ppos from t1 as t1 join
+select * from player as t1 join band as t2 on t1.id = t2.id where by = t3 on count = * group by = having count ( * ) >= 3
+select * from player as t1 join flight as t2 on t1.id = t2.id where by = t3 on count = *
+select max ( t1.hs ) from as t1 join as t2 on t1.pid = t2.id where by = t3 on t3.songid = t3.id where by =
+select max ( t1.hs ) from as t1 join as t2 on t1.id = t2.id where by = t3 on t3.songid = t3.id where by = desc limit 1
+select country from count ( * ) from operate_company as t1 join
+select country from flight order by join desc limit 1
+select avg ( t1.hs ) from player as t1 join
+select avg ( t1.hs ) from player as t1 join
+select count ( * ) from artist as t1 join
+select avg ( group_equity_shareholding ) from player
+select count ( * ) , t1.ppos from t1 as t1 join
+select count ( * ) from club as t1 join geographic as t2 on t1.pid = t2.id where t2.highest_elevation = t3
+select country from count ( * ) from as group by join
+select country from count group by country order by count ( * ) desc limit 1
+select count ( * ) from camera_lens where focal_length_mm > 25
+select count ( * ) from camera_lens as t1 join focal_length_mm as t2 on t1.id = t2.id where focal_length_mm = t3 on t1.id = t3.id where focal_length_mm > 200
+select count ( * ) from where as t1 join
+select count ( * ) from player as t1 join
+select count ( * ) from discipline_enrollments as t1 join product_characteristics as t2 on t1.medicine_id = t2.id join airport as t3 on t3.songid = t3.id where t3.name = "flash"
+select count ( * ) from discipline_enrollments as t1 join geographic as t2 on t1.customer_id = t2.id where t2.highest_elevation = t3 on t3.songid = t3.id where t3.name = "flash"
+select t1.id , count from player as t1 join player as t2 on t1.id = t2.id where by = having count ( * ) >= 2
+select t1.id , t1.name from player as t1 join player as t2 on t1.id = t2.company_id where by > having count ( * ) >= 2
+select t2.pilot from player as t1 join player as t2 on t1.id = t2.id where t1.principal_activities = t3 on t3.songid = t3.id where t3.title = t4 and
+select * from flight where t1 = 2010 or t2 = t2.id
+select max from player where t1 = > and t2 on from
+select t1.id from operate_company as t1 join t1 as t2 on t1.id = t2.id where t1.principal_activities = t3 intersect select = from
+select max ( omim ) from = as
+select max ( omim ) from = as
+select count ( * ) from artist as t1 join geographic as t2 on t1.customer_id = t2.customer_id group by = order by count ( * ) desc limit 1
+select count ( * ) from performance as t1 join geographic as t2 on t1.claim_id = t2.id where by = t3 on count ( * ) desc limit 1
+select count ( * ) from lessons as t1 join geographic as t2 on t1.customer_id = t2.customer_id where t2.region = t3 on t2.characteristic_id = t3.id where t2.region = ( select max ( from ) from = as
+select count ( * ) from customers as t1 join customers as t2 on t1.customer_id = t2.id where by = t3 select max ( * ) from =
+select count ( * ) from camera_lens where focal_length_mm > 15
+select count ( * ) from discipline_enrollments as t1 join photos as t2 on t1.id = t2.id where t1.principal_activities = t3 on t1.id = t3.id where * = t4
+select count ( * ) from where as t1 join
+select count ( * ) from discipline_enrollments as t1 join player as t2 on t1.id = t2.id where t1.year = t3 on
+select max from flight where t1 = ( as t2 on t1.pid = t2.id where by = order by count ( * ) desc limit 1
+select t1.id from flight as t1 join desc as t2 on t1.id = t2.id where by = t3 on count ( * ) desc limit 1
+select t1.id from player as t1 join having as t2 on t1.id = t2.id where by = having count ( * ) >= 2
+select distinct , t1.lname from select as t1 join t1 as t2 on t1.id = t2.id where min_dew_point_f = t3 intersect select = from
+select count ( * ) from discipline_enrollments as t1 join lives_in as t2 on t1.id = t2.id where t1.principal_activities = t3 on t1.id = t3.id where t3.title = t4 and
+select count ( * ) from discipline_enrollments as t1 join lives_in as t2 on t1.id = t2.id where t1.principal_activities = t3 on t1.id = t3.id where t3.title = t4 and
+select country from camera_lens where t1 join > as t2 on t1.id = t2.id where t1.principal_activities = t3 on select = from
+select distinct from from where t1 = join or as t2 on
+select t1.name from artist as t1 join t1 join as t2 on t1.id = t2.id join airport as t3 on t2.airport_id = t3.id where t3.name = t4
+select t1.country from artist as t1 join photos as t2 on t1.id = t2.id join airport as t3 on t1.id = t3.id where t3.name = "usa"
+select t1.id , t1.lname from t1 as t1 join t2 as t2 on t1.id = t2.id where by = having count ( * ) >= 2
+select t1.id , count from player as t1 join player as t2 on t1.id = t2.id where by = having group by * having count ( * ) >= 2
+select t1.id , t1.name from operate_company as t1 join t1 as t2 on t1.id = t2.id where t1.principal_activities = t3 on t1.id = 2
+select t1.id , count from player as t1 join player as t2 on t1.id = t2.id where by = having count ( * ) >= 2
+select distinct from from where
+select * from department where t1 = 1
+select sum ( * ) from =
+select carrier from department where t1 = 'doctor'
+select name , country from country
+select name , country from country
+select name , name from furniture
+select name , country from furniture where name =
+select count ( * ) from artist
+select count ( * ) from artist
+select count ( * ) from artist
+select count ( * ) from artist
+select count ( * ) from artist
+select count ( * ) from artist
+select * from department where t1 = 1
+select sum from department where t1 = 1
+select count ( * ) from artist
+select count ( * ) from =
+select name , country from country
+select name , country from department
+select name from department where name like '%a%'
+select name from department where name like '%a%'
+select name from department where name like '%a%'
+select name from department where name like '%a%'
+select count ( * ) from from
+select count ( * ) from artist where country = 'night'
+select count ( * ) from customers
+select count ( * ) from artist
+select count ( * ) from = where
+select count ( * ) from artist where country = 'night'
+select count ( * ) from = where
+select count ( * ) from =
+select count ( * ) from lessons as t1 join furniture_manufacte as t2 on t1.customer_id = t2.customer_id where t1.name = t3
+select count ( * ) from department where t1 = 'night'
+select count ( * ) from from where
+select count ( * ) from =
+select count ( * ) from department where t1 = 'night'
+select count ( * ) from department where t1 = 'night'
+select count ( * ) from department where t1 = 'night'
+select count ( * ) from department where t1 = 'night'
+select count ( * ) from customers where country = "los angeles"
+select count ( * ) from department where t1 = 'night'
+select country from count group by policy_type_code order by count ( * ) desc limit 1
+select country from count group by policy_type_code order by count ( * ) desc limit 1
+select country from count group by policy_type_code order by count ( * ) desc limit 1
+select country from count group by policy_type_code order by count ( * ) desc limit 1
+select name from apartments order by join desc limit 1
+select name from apartments order by join desc limit 1
+select sum from documents group by = order by sum ( * ) asc limit 1
+select max ( amount_claimed ) from =
+select country from count group by country order by count ( * ) desc limit 1
+select country from count group by country order by count ( * ) desc limit 1
+select t2.author , count from department as t1 join
+select sum ( t1.amount_claimed ) from = as t1 join settlements as t2 on t1.claim_id = t2.claim_id group by = order by sum ( * ) desc limit 1
+select t3.name from department as t1 join device as t2 on t1.department_id = t2.department_id join airport as t3 on t2.head_id = t3.head_id where t3.name = 'alabama'
+select t3.name from department as t1 join device as t2 on t1.department_id = t2.department_id where t2.country = t3
+select * from department as t1 join device as t2 on t1.department_id = t2.department_id where t2.country = t3
+select t3.name from department as t1 join customer_addresses as t2 on t1.customer_id = t2.customer_id where t2.country = t3
+select t3.name from department as t1 join cmi_cross_references as t2 on t1.service_id = t2.department_id where as = t3 on select = from
+select t3.name from department as t1 join routes as t2 on t1.service_id = t2.service_id where t1.document_name = t3 on select = from
+select distinct from from except select t1 from as t1 join = as t2 on t1.department_id = t2.department_id where as = t3
+select distinct from from where select = from
+select college from available_policies where by > having count ( * ) >= 3
+select policy_type_code from available_policies group by policy_type_code having count ( * ) >= 2
+select name from submission where by > 3
+select country from customer where by > having count ( * ) > 3
+select * from department where t1 = 1
+select name from department order by date_claim_made asc
+select * from department where t1 = "person"
+select sum ( * ) from = as
+select * from department where t1 = 1
+select * from department where t1 = 1
+select * from department where t1 = 'doctor'
+select sum ( * ) from = as
+select * from department where t1 = 1
+select sum ( * ) from =
+select count ( * ) from department where t1 = 'united states'
+select count ( * ) from department where t1 = 'tokyo'
+select name from member where not artist_id in ( select t1 from round )
+select name from department where select = from or as t1 join
+select count ( * ) from device
+select count ( * ) from device
+select name from shop order by name asc
+select name , location order by name asc
+select count ( * ) , country from device group by country
+select count ( * ) , country from device group by country
+select location from city group by open_year having count ( * ) > 3
+select location from stock group by open_year having count ( * ) > 2
+select count ( * ) , sum from stock group by country
+select count ( * ) , country from device group by country
+select name , location from shop where shop_name = "apple"
+select name , location from shop order by join desc limit 1
+select max ( budget_in_billions ) , max ( age ) from stock
+select max ( budget_in_billions ) , max ( budget_in_billions ) from stock
+select name , location from shop order by shop_name desc
+select name , location , location from shop order by shop_name
+select name from channel where age > ( select avg ( amount_settled ) from stock )
+select avg ( quantity ) from stock
+select name from stock order by join desc as t2 on t1.shop_id = desc group by t2.name order by count ( * ) desc limit 1
+select name from device group by location order by count ( * ) desc limit 1
+select name from channel order by join desc limit 1
+select name from shop order by rating_in_percent desc limit 1
+select name from device where not people_id in ( select device_id from stock )
+select name from device where not people_id in ( select device_id from stock )
+select t1.name from stock as t1 join desc as t2 on t1.shop_id = t2.shop_id group by t1.name order by count ( * ) desc limit 1
+select name from device group by location order by count ( * ) desc limit 1
+select name from shop where not device_id in ( select shop_id from stock )
+select name from shop where not device_id in ( select device_id from stock )
+select count ( * ) , t1.name from stock as t1 join
+select count , count ( * ) from device group by location
+select sum ( quantity ) from stock
+select sum ( quantity ) from stock
+select * from device
+select * from device
+select location from shop where open_year > 2000 intersect select location from stock where open_year < 1000
+select location from shop where open_year > 2000 intersect select location from shop where open_year > 1000
+select count ( distinct software_platform ) from
+select count ( distinct location ) from
+select count ( * ) from statements
+select count ( * ) from submission
+select name , max , max from ref_document_types
+select name , max , min from ref_document_types
+select t1.statement_details , t2.document_name from statements as t1 join documents as t2 on t1.statement_id = t2.document_id where t1.statement_details = 'private project'
+select t1.statement_details , t2.document_name from statements as t1 join documents as t2 on t1.statement_id = t2.document_id where t1.statement_details = 'private project'
+select name , t2.document_name , t1.account_details from ref_document_types as t1 join
+select name , t2.document_name , t2.document_date from ref_document_types
+select count ( distinct traverse ) from
+select count ( distinct traverse ) from
+select count ( * ) from accounts as t1 join ref_budget_codes as t2 on t1.statement_id = t2.id where t1.year = t3
+select count ( * ) from accounts as t1 join ref_budget_codes as t2 on t1.budget_type_code = t2.claim_id where t2.city = t3
+select count ( * ) , ) from documents group by join
+select count , count ( * ) from documents group by join
+select max , max from statements order by join desc limit 1
+select t1.statement_id , t2.statement_details from statements as t1 join statements as t2 on t1.statement_id = t2.statement_id group by t1.statement_id order by count ( * ) desc limit 1
+select project_id from documents group by project_id having count ( * ) > 2
+select document_type_code from documents group by join having as t2 on t1.customer_id = t2.customer_id group by as having count ( * ) > 1
+select name from documents where not document_id in ( select document_id from documents_with_expenses )
+select document_id from documents except select = from except select = from
+select count ( * ) from statements
+select count ( * ) from submission
+select t1.statement_id , t2.statement_details , t1.account_details from ref_document_types
+select max , max , t1.account_details from ref_document_types
+select distinct ( from )
+select distinct ( from )
+select count ( * ) from = where
+select document_type_description from documents where t1 = "film"
+select count ( * ) from documents where t1 = 'tokyo'
+select count ( * ) from statements
+select max ( t1.hs ) , t1.ppos from accounts as t1 join statements as t2 on t1.statement_id = t2.statement_id group by =
+select pname , account_details from accounts as t1 join statements as t2 on t1.statement_id = t2.customer_id where t1.statement_details = "4560596484842"
+select count , count ( * ) from documents group by join
+select count , count ( * ) from documents group by join
+select document_type_code from documents group by document_type_code order by count ( * ) desc limit 1
+select t1.statement_id from documents group by join order by count ( * ) desc limit 1
+select max from documents where by = having count ( * ) = 1
+select * from account_details where t1 join having as t2 on t1.cust_id = t2.cust_id where by > having count ( * ) > 3
+select max , t2.statement_details from statements
+select count ( * ) , ) from accounts as t1 join
+select document_type_description from documents where t1 = "film"
+select t1.document_id from documents as t1 join documents as t2 on t1.statement_id = t2.code join player as t3 on t2.characteristic_id = t3.head_id where t3.name = 1
+select t1.document_id from documents as t1 join ref_budget_codes as t2 on t1.budget_type_code = t2.document_id where t1.document_name = "government"
+select t1.document_id from documents as t1 join documents as t2 on t1.statement_id = t2.document_id where t1.statement_details = 'private project'
+select count , count ( * ) from documents group by join
+select count , count ( * ) from documents group by join
+select document_type_code from documents group by document_type_code order by count ( * ) desc limit 1
+select max from documents group by join order by count ( * ) desc limit 1
+select document_id from documents except select = from except select document_id from
+select document_id from documents except select = from except select = from
+select account_id , t2.budget_type_description from ref_budget_codes
+select account_id , t2.budget_type_description from statements
+select count ( * ) from =
+select max ( t1.amount_claimed ) from = as
+select count ( * ) from = as
+select max ( t1.amount_claimed ) from = as
+select distinct from from where
+select count ( * ) from =
+select document_type_description from documents where t1 = "film"
+select max ( t1.amount_claimed ) from =
+select count ( * ) from statements
+select count ( * ) from submission
+select count ( * ) from accounts as t1 = "film"
+select count ( * ) from accounts as t1 join tracklists as t2 on t1.statement_id = t2.id where t2.city = t3
+select t1.document_id from documents as t1 join ref_budget_codes as t2 on t1.document_id = t2.document_id where t1.document_name = "government"
+select document_type_description from documents where t1 = "film"
+select t1.statement_details , t2.document_name from statements as t1 join documents as t2 on t1.statement_id = t2.document_id where t1.statement_details = 'private project'
+select t1.statement_details , t2.document_name from statements
+select document_type_description from ref_document_types where t1 = "film"
+select name from documents where t1 = "film"
+select document_type_code , count ( * ) from documents group by join
+select count , count ( * ) from documents group by join
+select t1.statement_id , max ( , ) from accounts as t1 join
+select t1.statement_id , count ( * ) from accounts as t1 join
+select project_id from documents group by project_id having count ( * ) >= 2
+select project_id from documents where t1 = 1121 or t2 = 2
+select t1.statement_details , t2.document_name from statements as t1 join statements as t2 on t1.statement_id = t2.statement_id group by = order by count ( * ) desc limit 1
+select t1.statement_id , t2.document_name from statements order by join desc limit 1
+select project_id from documents group by = order by count ( * ) asc limit 1
+select max from documents order by = asc limit 1
+select name from account_details where open_year = "film"
+select project_id from documents group by project_id having count ( * ) >= 2
+select t1.document_id from documents where t1 = "film"
+select t1.document_id from documents where t1 = "film"
+select count ( * ) from artist
+select count ( * ) from editor
+select name from editor order by age asc
+select name from editor order by age asc
+select name , age from images
+select name , age from age
+select name from department where select t2.name from as t1 join = as
+select t2.name from department as t1 join 't' as t2 on = = t2.department_id where t2.name = t3
+select name from member where name like '%superstar%' or age = 2010
+select name from member where name like '%superstar%' or age = 2010
+select name from people order by age desc limit 1
+select max ( age ) from highlow
+select t2.name , count ( * ) from venue as t1 join
+select count , count ( * ) from church group by join
+select name from happy_hour group by age order by count ( * ) desc limit 1
+select max from happy_hour group by creation order by count ( * ) desc limit 1
+select policy_type_code from happy_hour group by policy_type_code having count ( * ) >= 2
+select t2.name from church group by join having count ( * ) >= 2
+select t3.name , t3.name from department as t1 join member_of_club as t2 on as = on join = as
+select t2.name , t3.name from member_attendance as t1 join
+select t3.name , t2.name from products as t1 join t1 as t2 on t1.browser_id = t2.code join by as t3 on t2.characteristic_id = t1.order_quantity order by t3.name asc
+select t3.name , t2.name from club as t1 join t2 as t2 on t1.browser_id = t2.scientist join by as t3 on by = desc order by t3.name asc
+select name from club as t1 join furniture_manufacte as t2 on t1.pid = t2.people_id where t2.name = t3
+select name from people as t1 join furniture_manufacte as t2 on t1.furniture_id = t2.people_id
+select t2.name , count ( * ) from club as t1 join t1 as t2 on t2 on t1.ssn = t2.scientist group by t2.name
+select t2.name , count ( * ) from climber as t1 join assignedto as t2 on t2 = t2.name group by t2.name
+select t2.name from church as t1 join having as t2 on t1.service_id = 2 group by t2.name having count ( * ) >= 2
+select t2.name from church as t1 join having as t2 on t1.service_id = 2 group by t2.name having count ( * ) >= 2
+select name from department where not journalist_id in ( select t1 from round )
+select name from department where not journalist_id in ( select journalist_id from news_report )
+select count ( * ) from products where age > 25
+select name , from where as t1 join and as t2 on
+select avg ( prominence ) from products where t1 join in as t2 on from = where
+select name , prominence from operate_company where age > 15
+select name , name from stadium order by join desc limit 1
+select avg ( price ) from manufacturer where open_year = 25
+select name , country from web_client_accelerator where country = 'united states'
+select name from stadium where age > ( select avg ( membership_amount ) from where )
+select name , t1.name , country from t1 join t1 join , as t2 on as = on
+select t1.name , t3.name , t2.name from t1 as t1 join geographic as t2 on t1.id = t2.id group by as t3 on count ( * ) desc limit 1
+select name , name from stadium order by open_year desc limit 1
+select name from enzyme where not t2.name in ( select t1 join furniture_manufacte as t2 on t1.id = t2.id where t2.name = t3
+select t1.name , t2.name from acceptance as t1 join accelerator_compatible_browser as t2 on t1.id = t2.id group by as t3 on count ( * ) desc limit 1
+select avg ( num_of_staff ) , avg ( age ) from avg
+select sum ( * ) from department as t1 join geographic as t2 on t1.pid = t2.id where t2.name = 'london'
+select t2.name from race as t1 join accelerator_compatible_browser as t2 on t2.accelerator_id = t2.service_id where t2.name = 3 intersect select t2.name from race as t1 join view_unit_status as t2 on t2.accelerator_id = t2.service_id where t2.name = t4
+select count ( * ) from storm where not > in ( select apt_id from assignedto )
+select count ( * ) from products where open_year = 2010
+select count ( * ) from artist
+select count ( * ) from country
+select count ( * ) from country
+select count ( * ) from country
+select name , country from club where t1 = "instructor"
+select name , country from club as t1 join asc
+select avg ( age ) , avg ( age ) from player
+select avg ( avg ) , avg from avg
+select avg ( gold ) from club
+select avg ( gold ) from club
+select name from club order by name asc
+select avg ( price ) from country
+select count ( distinct position ) from
+select count ( distinct country ) from
+select count ( distinct country ) from
+select count ( distinct position ) from
+select name from city where by > having count ( * ) > 2
+select name from city where t1 join having as t2 on t1.city_id = 2
+select t1.name from competition as t1 join intersect as t2 on from = where where = =
+select t1.name from club as t1 join hosting_city as t2 on t1.school_id = t2.document_id where t2.available_yn = intersect
+select sum ( * ) from products where t1 between 50 or year <= 1000
+select count ( * ) from club where t1 = 1850
+select t1.fname , t1.lname from customers as t1 join phone as t2 on t1.customer_id = t2.customer_id where t2.position = 'china'
+select t1.name , t1.lname from customers as t1 join routes as t2 on t1.customer_id = t2.customer_id where by = limit
+select name , country from club order by limit 1
+select name , country from club order by limit 1
+select name , country from club order by price asc
+select name from club order by name asc
+select t1.name , t1.city , country from t1 join t1 as t2 on t1.apid = t2.market_id where by = order
+select name from club order by name asc
+select t1.name , t1.city from club as t1 join desc as t2 on t1.customer_id = t2.src_apid group by as order by count ( * ) desc limit 1
+select name , country from pilot order by join desc limit 1
+select country from competition group by = order by count ( * ) desc limit 1
+select country from count group by = order by count ( * ) desc limit 1
+select t1.name , t2.birth_place from customers as t1 join desc as t2 on t1.customer_id = t2.customer_id group by as order by count ( * ) desc limit 1
+select t1.name , count ( * ) t1 join routes as t2 on t1.apid = t2.src_apid group by as order by count ( * ) desc limit 1
+select name , amount_claimed from pilot order by join desc limit 1
+select t1.name from customers as t1 join desc as t2 on t1.customer_id = t2.id group by as order by count ( * ) desc limit 1
+select t1.name , t1.city from t1 as t1 join routes as t2 on t1.customer_id = t2.customer_id group by as order by count ( * ) desc limit 1
+select name from pilot order by join desc limit 1
+select avg , avg ( elevation ) from club as t1 join
+select name , country from club
+select sum , avg ( elevation ) from club as t1 join
+select name , country , country from t1 as t1 join
+select country , count ( * ) from country group by country
+select country , count ( * ) from country group by country
+select country from flight group by country order by count ( * ) desc limit 1
+select country from flight group by country order by count ( * ) desc limit 1
+select country from city where by > having count ( * ) > 2
+select country from player where by > 50
+select count , count ( * ) from club as t1 join
+select count ( * ) , ) from flight group by join
+select count , count ( * ) from competition group by country
+select count ( * ) , ) from country group by join
+select name , name from club order by order by
+select name , country from club order by elevation asc
+select count ( * ) from routes as t1 join routes as t2 on t1.customer_id = t2.id where t2.country = "columbus crew"
+select count ( * ) from lessons as t1 join geographic as t2 on t1.customer_id = t2.customer_id where t2.country = "columbus crew"
+select name , country , country from t1 order by as desc limit 1
+select name , country , country from t1 order by as desc limit 1
+select count ( * ) , country from country group by country
+select count ( * ) , country from country group by country
+select count ( * ) from artist where t1 = 'united states'
+select name , name from club order by name desc
+select name , name , name from city
+select max ( t1.price ) , max ( weeks_on_top ) from stadium
+select avg ( avg ) , avg from avg
+select t1.name , t2.name from climber as t1 join event as t2 on t1.id = t2.mountain_id where t2.name = 1
+select name , t1.name from club as t1 join stadium as t2 on t1.id = t2.id where by = 1
+select name , t1.name from club as t1 join photos as t2 on t1.id = t1.id where t1.height = 4000
+select t1.id , t1.name from operate_company as t1 join location as t2 on t1.id = t1.id group by t1.id having count ( * ) > 1
+select t1.id , t1.name from stadium as t1 join accelerator_compatible_browser as t2 on t1.id = t1.id group by t1.id order by count ( * ) desc limit 1
+select distinct t1.name from club as t1 join architect as t2 on t1.id = t2.id where t2.country = 'american'
+select count ( distinct city ) from
+select count ( * ) from storm where not id in ( select name from
+select t1.id , t1.name from club as t1 join event as t2 on t1.id = t1.id where t1.name = t3 on t1.id = t3.id
+select t1.id , t1.name , t2.name from t1 as t1 join location as t2 on t1.id = t2.id where t2.name = 1
+select name from stadium where name like "%digital%"
+select * from flight where by = having and t2
+select max ( rating_in_percent ) from =
+select count ( * ) from customers
+select count ( * ) from customers
+select count ( * ) from =
+select * from flight where origin = 1
+select sum from city where from = where
+select * from customers where t1 = 1
+select * from * group by join order by count ( * ) desc limit 1
+select t1.vehicle_id , t2.login_name from customers as t1 join match as t2 on t1.statement_id = t2.id group by = order by count ( * ) desc limit 1
+select count ( * ) from customers
+select count ( distinct city ) from claims_processing
+select count ( distinct city ) from claims_processing
+select count ( distinct city ) from
+select count ( * ) from lessons where t1 = 1
+select count ( * ) from customers where t1 = 'night'
+select account_id , email from customers
+select local_authority , t1.course_description from flight where t1 = 1
+select t1.first_name , count from customers as t1 join match as t2 on t1.customer_id = t2.customer_id group by t1.student_id having count ( * ) >= 2
+select t1.course_description , t1.course_description from flight where t1 join having as t2 on t1.student_id = 2 where by > having
+select * from flight order by join desc
+select name from pilot order by open_year
+select * from customers as t1 join desc as t2 on t1.customer_id = t2.customer_id group by t1.claim_stage_id order by count ( * ) desc limit 1
+select t1.city , count ( * ) from accounts as t1 join match as t2 on t1.statement_id = t2.claim_stage_id group by t1.claim_stage_id order by count ( * ) desc limit 1
+select * from flight where t1 = 1
+select max from customers where t1 = 1
+select t1.first_name , count from customers as t1 join flight as t2 on t1.city_id = t2.id where by = having
+select t1.name , t1.age from customers as t1 join t1 join t2 on t2 on t1.customer_id = t2.customer_id where by = having
+select * , * from customers as t1 join
+select first_name , t1.course_description , t1.account_details from t1 join t1 join t2 as t2 on t1.student_id = t2.student_id where by = having
+select * from customers as t1 join desc as t2 on t1.customer_id = t2.customer_id group by t1.claim_stage_id order by count ( * ) desc limit 1
+select * from customers as t1 join desc as t2 on t1.customer_id = t2.customer_id group by t1.claim_stage_id order by count ( * ) desc limit 1
+select * from customers as t1 join desc as t2 on t1.customer_id = t2.customer_id group by t1.customer_id order by count ( * ) desc limit 1
+select t1.vehicle_id , t2.login_name from customers as t1 join match as t2 on t1.customer_id = t2.id group by = order by count ( * ) desc limit 1
+select * , count from customers as t1 join match as t2 on t1.author_id = t2.id group by t2.author_id order by count ( * ) desc limit 1
+select t1.personal_name , t1.family_name from customers as t1 join desc limit 1
+select * from customers except select t1.personal_name from students as t1 join
+select * from students where t1 join student_tests_taken
+select t1.last_name from customers as t1 join student_tests_taken as t2 on t1.registration_id = t2.registration_id where t2.test_result = t3
+select * from customers as t1 join student_tests_taken as t2 on t1.registration_id = t2.registration_id where t2.test_result = "pass"
+select * from courses as t1 join desc as t2 on t1.customer_address_id = desc group by = order by count ( * ) desc limit 1
+select name from pilot order by join desc limit 1
+select name from customers except select t1.personal_name from students as t1 join review as t2 on t1.customer_id = t2.customer_id where
+select name from customers except select t1.personal_name from customers as t1 join review as t2 on t1.customer_id = t2.customer_id
+select t1.first_name , count from customers as t1 join match as t2 on t1.customer_id = t2.customer_id group by t1.student_id having count ( * ) >= 2
+select t1.first_name , t2.middle_name from customers as t1 join match as t2 on t1.customer_id = t2.customer_id group by t1.student_id having count ( * ) >= 2
+select sum ( * ) from = as t1 join review as t2 on t1.customer_id = t2.customer_id where by = 1
+select count ( * ) from = where as t1 join
+select first_name , family_name from customers as t1 join subjects as t2 on t1.school_id = t2.id where by =
+select t1.first_name , t2.statement_details from customers as t1 join match as t2 on t1.customer_id = t2.customer_id where by = t3
+select name , gdp from pilot order by join desc
+select first_name , t2.statement_details , t1.account_details from t1 join t1 join subjects as t2 on t1.statement_id = t2.id where by =
+select * from course_authors_and_tutors as t1 join student_tests_taken as t2 on t1.author_id = t2.staff_id where t2.test_result = "operating system" or t2.course_name = "data structure"
+select * from flight as t1 join student_tests_taken as t2 on t1.registration_id = t2.registration_id where t2.test_result = "pass" or
+select t2.claim_status_name , count ( * ) from policies group by join order by count ( * ) desc limit 1
+select name , max from pilot where t1 join desc limit 1
+select avg ( price ) from courses
+select avg ( * ) from flight
+select max from customers where by = desc limit 1
+select * from customers order by join desc limit 1
+select count ( * ) from customers
+select count ( * ) from customers
+select * from customers where by = 1
+select claim_status_description from customers where t1 = 1
+select count ( * ) * ) from policies group by join order by count ( * ) desc
+select count ( * ) from lessons as t1 join customers as t2 on t1.customer_id = t2.id where t1.city = 1 and by = 1
+select * from customers as t1 join desc as t2 on t1.customer_id = t2.customer_id group by t1.claim_stage_id order by count ( * ) desc limit 1
+select flno , t1.family_name from customers order by join desc limit 1
+select last_name from customers as t1 join review as t2 on t1.customer_id = t2.customer_id where t1.document_name = t3 intersect select = from
+select last_name from customers as t1 join review as t2 on t1.customer_id = t2.customer_id where t2.test_result = t3 intersect select = from
+select count ( distinct city ) from claims_processing
+select * from customers where claim_status_name = "pass"
+select * from customers order by join desc
+select * from flight order by join desc
+select * from customers where claim_status_name = 1
+select max ( * ) from = where
+select t1.name from airports as t1 join student_tests_taken as t2 on t1.city_id = t2.staff_id where t1.first_name = t3 on t2.match_id = * where
+select t1.city from airports as t1 join student_tests_taken as t2 on t1.registration_id = t2.staff_id where t2.test_result = t3 or select = from
+select country from flight order by height asc
+select country from stadium order by height asc
+select country from flight
+select name from flight where t1 = 'united states'
+select count ( * ) from flight where t1 = 'tokyo'
+select count ( * ) from flight as t1 join flight as t2 on t1.building_id = t2.id where t2.name = 'ethiopia'
+select date , country from pilot order by altitude
+select date , country from pilot order by join asc
+select country from flight where country = "person" or country = "duke"
+select country from flight where t1 = "person" or country = "duke"
+select country , count ( * ) from stadium group by join order by count ( * ) desc limit 1
+select country , count ( * ) from stadium group by join order by count ( * ) desc limit 1
+select count , count ( * ) from flight as t1 join
+select count ( distinct position ) from flight as t1 join
+select country from flight where t1 = 'united states'
+select country from flight where country = asc
+select country from stadium where t1 = 'united states' as t2 on t1.building_id = t2.id where t2.name = "ryley goldner"
+select country from stadium where t1 = 'united states' as t2 on from
+select count ( * ) from flight where t1 = 'thompson'
+select count ( * ) from flight where t1 = 'united states'
+select country , count ( * ) from flight group by join
+select country , count ( * ) from stadium group by join
+select country , count ( * ) from flight group by join
+select country , count ( * ) from flight group by country
+select date , max_temperature_f from stadium as t1 join 1 as t2 on t1.film_id = t2.id where by = order by count ( * ) desc limit 1
+select date from stadium as t1 join asc as t2 on t1.catalog_level_number = t2.id where by = asc
+select country from stadium where t1 = join or as t2 on t1.graphics_mode = t2.id where t2.name = t3
+select date from stadium as t1 join flight as t2 on t1.building_id = t2.id where t2.name = "ryley goldner"
+select country from flight order by height asc
+select country from flight order by country asc
+select name from stadium order by open_year desc limit 3
+select t1.id , mean_temperature_f from player as t1 join desc as t2 on t1.id = t2.id group by t1.id order by count ( * ) desc limit 3
+select max ( amount_outstanding ) , max ( amount_outstanding ) from stadium
+select max ( group_equity_shareholding ) , max ( amount_outstanding ) from stadium
+select country from flight where t1 = "person" or t2 =
+select country from flight where country = 'united states'
+select country from flight where t1 = join or as t2 on
+select date from flight where country = asc
+select max ( sales_billion ) from as t1 join as t2 on t1.id = t2.id where t1.principal_activities = t3
+select name from stadium order by height asc limit 1
+select country from flight where t1 = join or as t2 on t1.graphics_mode = t2.id where t2.name = t3
+select date , country from flight where t1 = 1
+select count , count ( * ) from flight group by join
+select count , count ( * ) from operate_company as t1 join
+select date , max from stadium order by join desc limit 1
+select date , max from stadium order by capacity desc limit 1
+select date , meter_300 from stadium as t1 join flight as t2 on t1.id = t2.company_id where by = t3 on by = t3.id
+select date , meter_300 from stadium as t1 join flight as t2 on t1.id = t2.id where by = t3 on t2.airport_id = t3.id
+select country from flight where t1 = join or as t2 on t1.graphics_mode = t2.id join airport as t3 on t1.company_id = t3.id where t3.name = >
+select country from flight as t1 join flight as t2 on t1.building_id = t2.id where t2.name = t3 or t1.brand = t3.id
+select name from stadium where select country from stadium where not id from
+select country from stadium where t1 = join or as t2 on t1.graphics_mode = t2.id where t2.name = t3 or
+select date , t1.type from operate_company as t1 join t1 as t2 on t1.id = t2.company_id where t1.principal_activities = t3
+select date , t1.lastname from operate_company as t1 join t1 as t2 on t1.id = t2.id where t1.principal_activities = t3
+select date , country from stadium where t1 join > as t2 on from = where
+select date , country , country from stadium where t1 join > as
+select t1.id from flight as t1 join flight as t2 on t1.id = t2.company_id group by > having count ( * ) > 1
+select t1.id from flight as t1 join having as t2 on t1.id = t2.company_id group by > having count ( * ) > 1
+select name from stadium where not id in ( select t1 from photos where t1 = 'united states' )
+select name from stadium where not id in ( select t1 from flight where
+select name from stadium except select country from stadium where t1 join > as
+select name from stadium except select country from stadium where t1 join > as
+select count ( * ) from people
+select count ( * ) from people
+select name from people order by height desc
+select name from people order by height desc
+select t2.birth_date , birth_place from people as t1 join people as t2 on t1.people_id = t2.people_id group by =
+select company , height from people as t1 join people as t2 on t1.people_id = t2.people_id
+select avg ( height ) from people
+select avg ( money_requested ) from people
+select t2.birth_date from people as t1 join people as t2 on t1.people_id = t2.people_id order by t2.height desc limit 1
+select t2.date from people as t1 join people as t2 on t1.people_id = t2.people_id order by t2.height desc limit 1
+select count ( * ) from people where t1 join people as t2 on t1.people_id = t2.people_id where t2.height > 200
+select max ( t1.total ) from body_builder as t1 join people as t2 on t1.people_id = t2.people_id where t2.height = "%january%"
+select name from people as t1 join people as t2 on t1.people_id = t2.people_id
+select name from people as t1 join people
+select name from people as t1 join people as t2 on t1.people_id = t2.people_id where t2.height > 200
+select t2.name from body_builder as t1 join people as t2 on t1.people_id = t2.people_id where t2.height > 200
+select name from people order by height asc
+select t2.name from people as t1 join people as t2 on t1.people_id = t2.people_id order by t2.height
+select name from people order by height desc limit 1
+select name from people order by height asc limit 1
+select t2.date from people as t1 join people as t2 on t1.people_id = t2.people_id order by t2.height asc
+select t2.date from people order by height desc limit 1
+select avg ( t1.total ) from body_builder as t1 join people as t2 on t1.people_id = t2.people_id where t2.height > 200
+select avg ( height ) from body_builder as t1 join people as t2 on t1.people_id = t2.people_id where t2.height > 200
+select t2.name from people as t1 join people as t2 on t1.people_id = t2.people_id order by t2.height desc
+select name from people order by height asc
+select birth_place , count ( * ) from people group by birth_place
+select count ( * ) , birth_place from people group by birth_place
+select birth_place from people group by birth_place order by count ( * ) desc limit 1
+select investor from people group by birth_place order by count ( * ) desc limit 1
+select birth_place from people group by birth_place having count ( * ) >= 2
+select investor from people group by birth_place having count ( * ) >= 2
+select name , name from people order by name asc
+select name , name from people order by name asc
+select name from people where not people_id in ( select people_id from people )
+select name from people where not people_id in ( select people_id from people )
+select name from people where not people_id in ( select people_id from people )
+select name from people where not people_id in ( select people_id from people )
+select count ( distinct birth_place ) from people
+select count ( distinct birth_place ) from people
+select count ( * ) from artist
+select name , headquarter from order
+select min , max , min from ref_document_types
+select max ( amount_outstanding ) , max ( stars ) from
+select t1.state from artist as t1 join t1 as t2 on t1.pid = t2.id where t1.area = t3 on t1.id = t3.restaurant_id where t3.name = 'charles'
+select name from documents where select = from
+select distinct , , from from
+select t1.fname , t1.lname from college as t1 join customer_policies as t2 on t1.service_id = t2.cust_id group by as having count ( * ) >= 2
+select t1.fname , t1.lname from customers as t1 join loan as t2 on t1.customer_id = t2.customer_id join by as order by count ( * ) desc limit 1
+select count ( * ) from appellations as t1 join tryout as t2 on t1.appelation = t2.id where t1.year = 2015 and t1.year =
+select count ( * ) from submission where not = in
+select max ( t1.amount_claimed ) from as t1 join as t2 on t1.claim_id = t2.claim_id group by t1.ppos order by count ( * ) desc limit 1
+select t1.firstname , t1.lastname , characteristic_data_type from t1 as t1 join phone as t2 on t1.statement_id = t2.pid where t1.statement_details = t3
+select sum ( t1.hs ) from as t1 join as t2 on t1.pid = t2.id join writes as t3 on t3.songid = t3.id where t2.region = ( select max ( amount_claimed ) from = as
+select name from department where title like '%a%'
+select name from products where name like "%digital%"
+select name from products where name like "%digital%"
+select count ( * ) from club as t1 join routes as t2 on t1.manufacturer = t2.code where t1.name = 'john f kennedy international airport'
+select count ( * ) from products where t1 = 'tokyo'
+select sum ( revenue ) from club as t1 join manufacturers as t2 on t1.manufacturer = t2.code where t1.name =
+select count ( * ) from manufacturers where t1 = ( as t2 on from = t2.code where t2.name = 1
+select name from manufacturers where name = 'doctor'
+select name from products where name like "%digital%"
+select name from city where name = 255
+select name from manufacturers where name = 'doctor'
+select name from manufacturers group by name order by count ( * ) desc limit 1
+select name from manufacturers where name = "punk"
+select name , country from products
+select name , country from products where t1 = 1
+select name , country from products
+select name , location from products
+select avg ( t1.price ) from club as t1 join manufacturers as t2 on t1.manufacturer = t2.code where t1.name = (
+select avg ( price ) from products
+select name from club where t1 = ( select max = (
+select name from club where t1 = (
+select sum ( revenue ) , sum ( revenue ) from
+select count ( * ) , t1.name from products as t1 join
+select avg ( t2.points ) from club as t1 join ( as t2 on t1.manufacturer = t2.code where t1.name = (
+select avg ( t2.points ) from club as t1 join ( as t2 on t1.manufacturer = t2.code where t1.name = (
+select sum ( price ) from department as t1 join
+select count ( * ) from products as t1 join routes as t2 on t1.apid = t2.code where t1.name = 'john f kennedy international airport'
+select count ( * ) from products where name = 'tokyo'
+select sum ( revenue ) from =
+select avg ( price ) , sum ( revenue ) from department
+select max ( price ) , max ( revenue ) from =
+select count ( * ) from manufacturers where headquarter = 'tokyo'
+select count ( distinct name ) from products
+select count ( * ) from manufacturers where name = 'tokyo'
+select count ( distinct name ) from products
+select count ( * ) from manufacturers where name = 'tokyo'
+select count ( * ) from manufacturers where headquarter = 'tokyo'
+select count ( * ) from from
+select count ( * ) from manufacturers where name = 'tokyo'
+select name from club order by name desc limit 1
+select name from city order by name desc limit 1
+select name from manufacturers group by name order by count ( * ) desc limit 1
+select name from manufacturers group by name order by count ( * ) desc limit 1
+select count ( * ) from club as t1 join routes as t2 on t1.apid = t2.code where t1.name = 'john f kennedy international airport'
+select count ( * ) from products where t1 = 'tokyo'
+select name from products where select = from intersect select = from
+select name from products where t1 = 'friendly' intersect select = from
+select name from products where select = from intersect select = from
+select t1.name from products as t1 join routes as t2 on t1.name = t2.code where t2.name = 'creative labs'
+select count ( distinct name ) from products as t1 join
+select count ( * ) from products where name = 'tokyo'
+select distinct name from products where name like or
+select distinct name from products where name like or
+select name from club where name = 'united states' or headquarter = 'taiwan'
+select name from products where t1 = 'cuba' or select = from
+select name from manufacturers group by name order by count ( * ) desc limit 1
+select name from manufacturers group by name order by count ( * ) desc limit 1
+select name from city where t1 = 'united states'
+select name from products where t1 join in as t2 on t1.name = t2.code where t2.name = "the phantom of the opera"
+select name from city order by name desc limit 1
+select name from city order by = desc limit 1
+select name , name , country from by order by limit 1
+select name , name , country from country order by name desc
+select avg ( revenue ) from club as t1 join in as t2 on t1.manufacturer = t2.code where t1.name = (
+select count ( * ) from routes where not id in ( select name from where )
+select sum ( * ) from manufacturers where not = in ( select = from
+select count ( * ) from club where not id in ( select name from = )
+select name from club where name = "tennis club"
+select name from club where name = 'new york'
+select sum ( * ) from products as t1 join manufacturers as t2 on t1.building_id = t2.code where t2.name = 2002
+select sum ( * ) from = where
+select name from city where not t1.name in ( select t1 from products )
+select name from city where not t1.name in ( select t1 from products )
+select name from country where not t1.name in ( select t1 from products )
+select name from city where not t1.name in ( select t1 from products )
+select name from city where not t1.name in ( select t1 from products )
+select name from city where not t1.name in ( select t1 from products )
+select name from country where not name in ( select name from products )
+select name from country where not name in ( select name from products )
+select name from country where country name asc
+select name from name where not name in ( select name from products )
+select name from products where select t1.name from products as t1 join manufacturers as t2 on t1.manufacturer = t2.code where t2.name = 'dvd drive'
+select name from country where select name from products where t1 = 'united states'
+select name from city where not t1.name in ( select t1 from assignedto )
+select name from products where not t1.name in ( select t1 from products as t1 join manufacturers as t2 on t1.manufacturer = t2.code where t1.name = 'dvd drive'
+select name from city where name = "tennis club"
+select distinct t1.name from products as t1 join t1 as t2 on t1.manufacturer = t2.code where t1.name = "the phantom of the opera"
+select name , name , country from country order by name asc
+select name , name , name from club order by name desc
+select name , name , country from t1 order by limit 1
+select name , name , country from country order by name desc limit 1
+select t1.name , count ( * ) from >= as t1 join manufacturers as t2 on t1.manufacturer = 2
+select t1.name , count ( * ) from products as t1 join having as t2 on t1.manufacturer = 2 group by t1.name having count ( * ) >= 2
+select count ( * ) , avg from city where t1 > 2
+select count ( * ) , t1.name from city where t1 join city as t2 on
+select name , avg ( t1.price ) from where as t1 join t2 as t2 on t1.manufacturer = t2.code where by =
+select avg ( t1.price ) , max ( cases as t1 join manufacturers as t2 on t1.manufacturer = t2.code group by t1.name
+select avg ( price ) , max ( cases ) from = as t1 join
+select avg ( t1.price ) , ) from products as t1 join manufacturers as t2 on t1.manufacturer = t2.code group by =
+select name , name from products order by price desc limit 3
+select name , name from products order by price desc limit 5
+select name from city order by name desc limit 3
+select name from city order by name desc limit 3
+select name from city order by name desc limit 3
+select name from city order by name desc limit 3
+select count ( * ) from country where country = 'andy'
+select count ( * ) from country where country = 'andy'
+select t1.name from products as t1 join manufacturers as t2 on t1.manufacturer = t2.code where t2.name = 'creative labs'
+select t1.name from products as t1 join manufacturers as t2 on t1.manufacturer = t2.code where t2.name = 'creative labs' or select t1.name from
+select avg ( price ) , max ( cases ) from products where t1 = 1990
+select avg ( price ) , max ( cases ) from products where t1 = 1990
+select name from products where name between 120 and name
+select name from products where t1 = 100 and t2 = 5
+select name from products order by price desc limit 1
+select name from pilot group by name order by count ( * ) desc limit 1
+select name from pilot order by name desc limit 1
+select t1.name , t1.name , count ( * ) from products as t1 join
+select count ( * ) from club as t1 join routes as t2 on t1.apid = t2.code where by = ( select max ( t3.order_quantity ) desc limit 1
+select count ( * ) from club as t1 = 'tokyo'
+select name from club order by name desc limit 1
+select name from department where name = 'united states'
+select count ( * ) from performance
+select count ( * ) from performance
+select name from performance order by attendance asc
+select name from performance order by attendance asc
+select name from member where not member_id in (
+select name from member where not member_id in ( select member_id from member_attendance )
+select date from performance order by attendance desc
+select date from performance order by attendance asc
+select avg ( attendance ) from performance
+select avg ( attendance ) from performance
+select max ( attendance ) , max ( sales_billion ) from performance where t1 = 'united states'
+select max ( sales_billion ) , max ( attendance ) from performance
+select count ( distinct artist_id ) from member
+select count ( distinct location ) from member
+select name from performance order by attendance desc
+select name from performance order by attendance desc
+select name from performance order by attendance desc limit 1
+select t2.name from performance as t1 join desc as t2 on t1.member_id = t2.member_id group by as order by count ( * ) desc limit 1
+select t2.name , t2.name from member_attendance as t1 join market as t2 on t1.member_id = t2.member_id where t2.name = t3
+select t2.name from performance as t1 join member as t2 on t1.member_id = t2.member_id join member as t3 on t1.performance_id = t3.performance_id where t3.name = "violin"
+select t2.name from performance as t1 join having as t2 on t1.member_id = t2.member_id group by as having count ( * ) > 1
+select t2.name from performance as t1 join having as t2 on t1.member_id = t2.member_id group by as having count ( * ) > 1
+select t2.name from performance as t1 join member as t2 on t1.member_id = t2.member_id group by t2.name order by count ( * ) desc limit 1
+select t2.name from performance as t1 join desc as t2 on t1.member_id = t2.member_id group by t2.name order by count ( * ) desc limit 1
+select t2.name from performance as t1 join member as t2 on t1.member_id = t2.member_id join performance as t3 on t1.performance_id = t3.performance_id where t3.name = 2000
+select t2.name from performance as t1 join member as t2 on t1.member_id = t2.member_id where t2.name = 1
+select count , count ( * ) from performance group by join
+select count ( * ) , country from performance group by country
+select date from performance order by attendance asc
+select date from performance order by attendance asc
+select location from performance group by location order by count ( * ) desc limit 1
+select location from performance group by location order by count ( * ) desc limit 1
+select name from member where not member_id in ( select member_id from member_attendance )
+select name from member where not member_id in ( select member_id from member )
+select t3.location from performance where t1 = 2000 intersect select on from = where where attendance = 2000
+select location from member where select = 2000 intersect select studio from member where attendance = 1990
+select count ( * ) from performance where t1 = "td garden" or t2 = "bell centre"
+select count ( * ) from performance as t1 join member as t2 on t1.member_id = t2.member_id where t2.name = t3
+select t2.name from performance as t1 join customer_policies as t2 on t1.member_id = t2.member_id group by as having count ( * ) > 1
+select t2.name from performance as t1 join round as t2 on t1.member_id = t2.member_id where t2.name = 2
+select count ( * ) from flight
+select count ( * ) from web_client_accelerator
+select name , name from accelerator_compatible_browser
+select name , name from web_client_accelerator
+select name from flight where name like "%opera%"
+select count ( * ) from =
+select count ( * ) from web_client_accelerator
+select name from projects where name like "%opera%"
+select name from projects where t1 = 'doctor'
+select name from projects where name like "%opera%"
+select name from flight where name like "%opera%"
+select count ( * ) from web_client_accelerator
+select count ( * ) from flight where t1 = 2010
+select count ( * ) from flight where name = 2010
+select count , count ( * ) from web_client_accelerator as t1 join
+select count ( * ) , ) from flight as t1 join
+select policy_type_code from flight group by join order by count ( * ) desc limit 1
+select name from flight group by join order by count ( * ) desc limit 1
+select * from flight where t1 = 1121
+select name from projects where t1 = 100 or t2 on
+select name , operating_system from web_client_accelerator as t1 join
+select count ( * ) , t1.name from web_client_accelerator as t1 join assignedto as t2 on t1.browser_id = t2.project group by t1.name
+select t1.name , t1.hours from item as t1 join accelerator_compatible_browser as t2 on t1.bandmate = t2.id join by as t3 on count ( * ) >= 2
+select operating_system , count ( * ) from web_client_accelerator as t1 join
+select t1.name from accelerator_compatible_browser as t1 join accelerator_compatible_browser as t2 on t1.bandmate = t2.id group by as order by count ( * ) desc limit 1
+select t1.name from accelerator_compatible_browser as t1 join accelerator_compatible_browser as t2 on t1.id = t2.project group by as order by count ( * ) desc limit 1
+select t1.name from accounts as t1 join accelerator_compatible_browser as t2 on t1.id = t2.company_id group by = having count ( * ) >= 3
+select t1.name from accounts as t1 join accelerator_compatible_browser as t2 on t1.id = t2.project group by t1.name having count ( * ) >= 3
+select t1.name from assignedto as t1 join accelerator_compatible_browser as t2 on t1.browser_id = t2.id join web_client_accelerator as t3 on t1.scientist = t3.id where t3.name = t4
+select name from projects as t1 join projects as t2 on t1.browser_id = t2.id join web_client_accelerator as t3 on t3.songid = t3.id where t3.name = t4
+select count ( * ) from web_client_accelerator as t1 join lives_in as t2 on = t2.id where t2.name = t3
+select count ( * ) from web_client_accelerator
+select name from students except select t1.name from students as t1 join
+select name from students except select t1.name from assignedto as t1 join
+select name from useracct where not id in ( select t1 from assignedto )
+select name from web_client_accelerator where select t1.name from assignedto as t1 join accelerator_compatible_browser as t2 on t1.id = where
+select t3.name from performance as t1 join accelerator_compatible_browser as t2 on t1.bandmate = t2.id join web_client_accelerator as t3 on t3.songid = t3.id where t3.name = 'cachebox' intersect select = from
+select t3.title from documents as t1 join accelerator_compatible_browser as t2 on t1.service_id = t2.id join web_client_accelerator as t3 on t3.songid = t3.id where t3.name = t4
+select t1.name from web_client_accelerator as t1 join accelerator_compatible_browser as t2 on t2.accelerator_id = t2.id join web_client_accelerator as t3 on t3.songid = t3.id where t3.name = 'cachebox' and select = from
+select t1.name from assignedto as t1 join accelerator_compatible_browser as t2 on t2.accelerator_id = t2.id join web_client_accelerator as t3 on t3.songid = t3.id where t3.name = 'cachebox' intersect select = from
+select count ( * ) , ) from flight as t1 join
+select count ( * ) , ) from flight as t1 join
+select t1.name , t3.name from web_client_accelerator as t1 join accelerator_compatible_browser as t2 on t2.accelerator_id = t2.id join web_client_accelerator as t3 on t3.songid = t3.id where t3.name = 'cachebox'
+select t1.name , count ( * ) from web_client_accelerator as t1 join accelerator_compatible_browser as t2 on t1.id = t2.project group by t1.id having count ( * ) >= 2
+select t1.name from accelerator_compatible_browser as t1 join accelerator_compatible_browser as t2 on t1.id = t2.id group by as order by count ( * ) desc limit 1
+select name from projects as t1 join accelerator_compatible_browser as t2 on t1.bandmate = t2.project group by as order by count ( * ) desc limit 1
+select t1.name from accounts as t1 join accelerator_compatible_browser as t2 on t1.id = t2.project group by = having count ( * ) >= 2
+select name from accelerator_compatible_browser as t1 join accelerator_compatible_browser as t2 on t1.id = t2.id where by = having count ( * ) >= 2
+select t1.name from reservations as t1 join t1 as t2 on t1.id = t2.id where by > having count ( * ) >= 2
+select t1.name from reservations as t1 join personfriend as t2 on t1.id = t2.id where t1.card_number = t3 intersect select t1.name from vocals as t1 join as t2 on t1.id = t2.id where t1.name = t4 on t1.id = t3.id where
+select count ( * ) from web_client_accelerator
+select count ( * ) from web_client_accelerator as t1 join assignedto as t2 on t1.browser_id = t2.id join web_client_accelerator as t3 on t3.songid = t3.id where t3.name = "flash"
+select avg ( market_share ) from web_client_accelerator where not id in
+select avg ( hours ) from projects
+select avg ( market_share ) from web_client_accelerator where not id in ( select enzyme_id from accelerator_compatible_browser )
+select name from flight where not id in ( select enzyme_id from accelerator_compatible_browser )
+select * from customers as t1 join staff as t2 on t1.customer_id = t2.customer_id where t2.country = t3 intersect select = from
+select * from customers as t1 join routes as t2 on from = where where = = intersect
+select count ( * ) from lessons as t1 join lives_in as t2 on t1.stuid = t2.staff_id where t2.city = t3 on
+select avg ( elevation ) from lessons as t1 join t2 as t2 on t1.staff_id = t2.staff_id where t1.sex = t3
+select * from faculty as t1 join t1 as t2 on t1.service_id = t2.id where t1.principal_activities = t3 or select = from
+select distinct , t1.lname from customers as t1 join t1 join t2 as t2 on t1.customer_id = t2.customer_id where by = having count ( * ) >= 2
+select name from city where t1 join union as t2 on from = where where = >
+select name from city where t1 join union as t2 on from
+select distinct from from as t1 = join or as t2 on
+select * from customers as t1 join t1 or select = from
+select * from customers where t1 = 'united states' or select = from
+select t1.fname , t1.last_name from customers as t1 join customers as t2 on t1.customer_id = t2.customer_id where by =
+select t1.activity_name , count ( * ) from as group by join
+select t1.fname , t1.lname from t1 as t1 join t1 as t2 on t1.statement_id = t2.src_apid group by = order by count ( * ) desc limit 1
+select t1.fname from customers as t1 join t1 as t2 on t1.facid = t2.advisor group by = having count ( * ) >= 2
+select t1.fname , t1.lname from customers as t1 join t1 join t2 as t2 on t1.apid = t2.src_apid where by = having count ( * ) >= 1
+select name from airports order by join desc limit 1
+select * from customers as t1 join customers as t2 on t1.customer_id = t2.customer_id group by = order by count ( * ) desc limit 1
+select t1.fname , count ( * ) from as t1 join t2 as t2 on t1.statement_id = t2.claim_stage_id group by = order by count ( * ) desc limit 1
+select t1.fname , t1.lname from t1 as t1 join t1 as t2 on t1.apid = t2.id where by = order by count ( * ) desc limit 1
+select sum ( t1.amount_claimed ) from = order as t2 on t1.customer_id = t2.customer_id group by = order by count ( * ) desc limit 1
+select sum ( * ) from = as
+select sum ( t1.amount_claimed ) from = as t1 join t2 as t2 on t1.statement_id = t2.claim_id group by = order by count ( * ) desc limit 1
+select t1.fname , count ( * as t1 join t1 as t2 on t2 on t1.statement_id = t2.claim_id group by = order by count ( * ) desc limit 1
+select t1.fname from customers as t1 join t1 as t2 on t2 on t1.facid = t2.advisor group by = having count ( * ) >= 2
+select t1.fname , t1.lname from customers as t1 join t1 as t2 on t2 on t1.customer_id = t2.customer_id where by = having group by =
+select t1.name , t1.city from t1 as t1 join t1 as t2 on t1.customer_id = t2.customer_id where t1.card_number = t3
+select country from participates_in where t1 = join intersect select t2 from
+select t1.first_name , t1.city from customers as t1 join customers as t2 on t1.customer_id = t2.customer_id where by = limit
+select t1.first_name , t1.city from customers as t1 join
+select count ( * ) , ) from accounts as t1 join
+select sum , date_claim_settled from customers
+select card_id , t2.statement_details , t1.account_details from t1 as t1 join t2 as t2 on t1.statement_id = t2.src_apid
+select account_id , t1.document_type_description , country from t1 join t1 join
+select * from airports where t1 = 'cuba'
+select count ( * ) from =
+select name from airports where t1 = "instructor"
+select distinct , t1.lname from t1 as t1 join t2 as t2 on t1.statement_id = t2.id where by = t3
+select * from airports as t1 join t1 as t2 on t1.apid = t2.facid join player as t3 on t2.characteristic_id = t3.id where
+select t1.name , t1.city from t1 as t1 join t1 as t2 on t1.statement_id = t2.id where t1.statement_details = t3
+select t1.fname , t1.city from customers as t1 join t1 join t2 as t2 on t1.customer_id = t2.customer_id where t1.card_number = t3
+select t1.fname , t1.city from customers as t1 join t1 join t2 on t2 on t1.customer_id = t2.customer_id where by = t3
+select name from airports as t1 join desc limit 1
+select * from faculty as t1 join faculty_participates_in as t2 on t1.stuid = t2.id where t1.first_name = t3 or select = from
+select t1.city from airports as t1 join t1 as t2 on t1.apid = t2.id where t1.first_name = t3 and t1.last_name = (
+select * from airports where t1 = 'cuba' or t2 = 'argentina'
+select sum , country from customers as t1 join
+select name , country from customers
+select count ( * ) from lessons as t1 join customers as t2 on t1.customer_id = t2.customer_id where t2.city = t3
+select count ( * ) from lessons as t1 join faculty_participates_in as t2 on t1.customer_id = t2.customer_id where t2.city = "columbus crew"
+select count ( * ) from lessons as t1 join customers as t2 on t1.customer_id = t2.customer_id where t2.first_name = 'john f kennedy international airport'
+select count ( * ) from lessons as t1 join customers as t2 on t1.customer_id = t2.customer_id where t2.country = "ray"
+select count ( * ) from discipline_enrollments as t1 join or as t2 on t1.apid = t2.id where t1.fname = 50 and or =
+select t1.fname , t1.city , t1.city from t1 join t1 join t2 as t2 on t1.statement_id = t2.id where by = limit and
+select distinct from from where as t1 join or as t2 on
+select t1.name , t1.city from airports as t1 join t1 join t2 as t2 on t1.apid = t2.src_apid where by = 0
+select count ( * ) from customers where t1 join in as t2 on from
+select count ( * ) from lessons where t1 join routes as t2 on t1.apid = t2.id where t2.city = 'john f kennedy international airport'
+select count ( * ) from = where
+select t2.claim_status_name from customers as t1 join order by count ( * ) desc limit 1
+select count ( * ) from customers where not = in as t2 on from
+select count ( * ) from customers where t1 join in as t2 on from
+select count ( * ) from customers where t1 join in as t2 on from
+select count ( * ) from customers where t1 join in as t2 on from = t2.customer_id where t2.city = 'john f kennedy international airport'
+select count ( * ) from customers as t1 join in as t2 on from = where where = =
+select count ( * ) from customers as t1 join in as t2 on t1.customer_id = t2.customer_id where t2.city = t3
+select t1.name , t1.city from customers as t1 join t1 join t2 as t2 on t1.customer_id = t2.customer_id where t1.card_number = 0
+select t1.name , t1.city from customers as t1 join t1 as t2 on t1.city_id = t2.id where t1.card_number = t3 and
+select avg ( elevation ) from airports
+select avg ( elevation ) from player
+select max ( elevation ) from club as t1 join geographic as t2 on t1.city_name = where
+select max ( elevation ) from = as
+select count , count ( * ) from accounts group by join
+select count , count ( * ) from accounts group by join
+select count ( * ) from = from group by join order by count ( * ) desc limit 1
+select max from flight group by join order by count ( * ) desc limit 1
+select sum , country from customers where t1 = 'united states'
+select sum , date_claim_settled from customers where t1 = "instructor"
+select count , * from customers where t1 =
+select count ( * ) from = where
+select t1.name from airports as t1 join t1 as t2 on t1.apid = t2.id where t2.country = t3
+select distinct , t1.lname from customers as t1 join t1 join t2 as t2 on t1.statement_id = t2.id where by =
+select count ( * ) from artist
+select count ( * ) from =
+select name from club order by name asc
+select name from club order by name asc
+select name , location from
+select name , location from
+select name from people where not people_id in ( select people_id from climber )
+select name from people where not people_id in ( select people_id from climber )
+select name from products where t1 = or
+select name from products where t1 = 'doctor' or t2 =
+select name from people order by join desc limit 1
+select name from club order by join desc limit 1
+select t2.name , count ( * ) from race as t1 join
+select count , count ( * ) from race as t1 join
+select name from people group by join order by count ( * ) desc limit 1
+select country from count ( * ) from products as t1 join
+select max , max ( , ) from race as t1 join
+select max ( budget_in_billions ) , ) from
+select name , t3.name from products as t1 join people as t2 on t1.manufacturer = t2.code
+select name , country from products where t1 = 'safari'
+select name from club as t1 join round as t2 on t2.accelerator_id = t2.member_id where by > having count ( * ) > 1
+select name from club where t1 join > as t2 on
+select name from furniture as t1 join having as t2 on t1.customer_id = t2.customer_id group by t2.name having count ( * ) > 1
+select t1.name from race as t1 join having as t2 on t1.customer_id = t2.customer_id group by t2.name having count ( * ) > 1
+select t1.name , t2.name from climber as t1 join asc as t2 on t1.people_id = t2.team_id
+select t2.name , count ( * ) from climber as t1 join
+select name from people where not people_id in ( select people_id from round )
+select name from people where not people_id in ( select people_id from round )
+select t2.name from products as t1 join product_characteristics as t2 on t1.service_id = t2.id where t2.name = 5 intersect select t1.name from products as t1 join
+select t2.name from products as t1 join product_characteristics as t2 on t1.service_id = t2.id where t2.name = 5 intersect select t1.name from products as t1 join
+select count ( * ) from customers
+select name from department where t1 = like
+select * from customers where t1 = join or as t2 on
+select t1.name from customers as t1 join t1 as t2 on t1.service_id = t2.customer_id where t1.principal_activities = t3 or select = from
